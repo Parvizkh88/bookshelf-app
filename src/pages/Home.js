@@ -1,8 +1,12 @@
 import React from 'react'
+import Book from '../features/books/Book'
+import AddBook from '../features/books/AddBook'
 
 const Home = () => {
-    return (
-        <div>Home Page</div>
+    return (<>
+        <AddBook/>
+        <Book/>
+</>
     )
 }
 
