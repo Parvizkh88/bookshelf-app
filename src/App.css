@@ -50,9 +50,22 @@
   background-color: #fff1dc;
   height: 60vh;
   padding-top: 1rem;
-  padding-left: 35rem;
+  /* padding-left: 35rem; */
 }
 .footer {
   background-color: #e8d5c4;
   height: 20vh;
+}
+.showBooks {
+  display: flex;
+  flex-direction: column;
+  background-color: #eeeeee;
+  margin-left: 1rem;
+  width: 150px;
+  padding: 1rem;
+}
+.booksCollection {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
 }
