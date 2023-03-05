@@ -19,9 +19,18 @@ export const booksSlice = createSlice({
         },
         addBook: (state, action) => {
             state.books.push(action.payload);
+        },
+        updateBook: (state, action) => {
+            const { id, title, author } = action.payload;
+            // console.log(action.payload);
+            const book = state.books.filter(book => book.id === id);
+            if (book) {
+                book[0].title = title;
+                book[0].author = author;
+            }
         }
     }
 });
 
-export const { showBooks, deleteBook, addBook } = booksSlice.actions;
+export const { showBooks, deleteBook, addBook, updateBook } = booksSlice.actions;
 export default booksSlice.reducer;

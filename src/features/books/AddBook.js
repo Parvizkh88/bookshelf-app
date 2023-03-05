@@ -15,8 +15,10 @@ const AddBook = () => {
         e.preventDefault();
         const newBook = { id: uuidv4(), title, author };
         dispatch(addBook(newBook));
+        setTitle('');
+        setAuthor('');
         navigate('/show-book');
-    }
+    };
 
     return (
         <div>
