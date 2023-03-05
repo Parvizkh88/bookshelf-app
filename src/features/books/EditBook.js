@@ -6,6 +6,7 @@ import { updateBook } from './booksSlice';
 
 const EditBook = () => {
     const { state } = useLocation();
+    console.log(state);
     const dispatch = useDispatch();
 
     const [id, setId] = useState(state.id);
