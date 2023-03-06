@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, useParams } from 'react-router-dom';
 
 import EditBook from '../features/books/EditBook';
 import Home from '../pages/Home';
@@ -18,7 +18,7 @@ const Index = () => {
                     <Route path='/' element={<Home />} />
                     <Route path='/edit-book' element={<EditBook />} />
                     <Route path='/show-book' element={<Book />} />
-                    <Route path='/add-book' element={<AddBook />} />
+                    <Route path='/add-book' element={<EditBook />} />
                     <Route path='*' element={<Error />} />
                 </Routes>
             </main>
